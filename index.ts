@@ -12418,7 +12418,11 @@ http.createServer(function (req, res) {
 
 httpsServer.listen(443,3000);*/
 
-  app.listen(process.env.PORT || 3000);
+  //app.listen(process.env.PORT || 3000);
+  app.listen(process.env.PORT || 3000, function(err) {
+    if (err) console.log("Error in server setup") 
+    console.log("Hsnotify server listening on Port 3000"); 
+  });
 
 process.on('uncaughtException', function (err) {
     console.error((new Date).toUTCString() + ' uncaughtException:', err.message)
