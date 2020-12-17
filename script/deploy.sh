@@ -1,6 +1,7 @@
 #!/bin/sh
 
- ssh -t -t morit@lou-qa-notify-web1.hellospoke.com <<EOF 
+ ssh -t -t morit@10.20.223.224 <<EOF 
+  pwd
   cd ~/hsnotifyapi
   pwd
   git checkout main
@@ -11,3 +12,5 @@
   pm2 start index.js
   exit
 EOF
+
+
