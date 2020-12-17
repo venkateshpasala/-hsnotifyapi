@@ -9,7 +9,7 @@ pipeline {
         echo '*** Executing remote commands ***'
          sh '''#!/bin/bash
 	          date
-    	      ssh -t -t morit@10.20.223.224 >> ENDSSH
+    	      ssh  morit@10.20.223.224 >> ENDSSH
 	    	    date
 	    	    cd /hsnotify
 	    	    pwd
