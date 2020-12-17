@@ -6,16 +6,15 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-         sh 'npm install'
-         sh 'npm run build'
+         sh '''#!/bin/bash
+	          date
+    	      ssh morit@10.20.223.224 >> ENDSSH
+	    	    date
+	    	    cd /tmp
+	    	    pwd
+            ENDSSH
+          '''
       }
-    }  
-    
-            
-    stage('Test') {
-      steps {
-        sh 'npm run winserve'
-      }
-    }
+    } 
   }
 }
