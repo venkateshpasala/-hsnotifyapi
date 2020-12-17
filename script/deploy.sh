@@ -1,7 +1,6 @@
 #!/bin/sh
 
  ssh -t -t morit@10.20.223.224 <<EOF 
-  pwd
   cd ~/hsnotifyapi
   pwd
   git checkout main
