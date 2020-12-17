@@ -6,11 +6,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        echo '*** Executing remote commands ***'
          sh '''#!/bin/bash
 	          date
     	      ssh -t -t morit@10.20.223.224 >> ENDSSH
 	    	    date
-	    	    cd /tmp
+	    	    cd /hsnotify
 	    	    pwd
             ENDSSH
           '''
