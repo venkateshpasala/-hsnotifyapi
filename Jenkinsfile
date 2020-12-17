@@ -8,7 +8,7 @@ pipeline {
       steps {
          sh '''#!/bin/bash
 	          date
-    	      ssh morit@10.20.223.224 >> ENDSSH
+    	      ssh -tt morit@10.20.223.224 >> ENDSSH
 	    	    date
 	    	    cd /tmp
 	    	    pwd
